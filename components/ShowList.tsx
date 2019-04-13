@@ -9,7 +9,12 @@ export default ({ shows }: Props) => (
   <>
     {shows.length ? (
       shows.map(show => (
-        <Show show={show} key={show.date + show.time + show.title} />
+        <Show
+          title={show.title}
+          date={show.date}
+          time={show.time}
+          key={show.date + show.time + show.title}
+        />
       ))
     ) : (
       <div>There are now shows for this day</div>

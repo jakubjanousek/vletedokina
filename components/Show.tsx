@@ -1,11 +1,11 @@
-import { ShowType, shows } from "./Store";
-
 type Props = {
-  show: ShowType;
+  title: string;
+  date: string;
+  time: string;
 };
 
-export default ({ show }: Props) => (
+export default (props: Props) => (
   <div>
-    {show.date} {show.time} - {show.title}
+    {props.date} {props.time} - {props.title}
   </div>
 );
