@@ -1,1 +1,57 @@
+$pink: #fddfdc;
+$blue: #1a3a69;
 
+body {
+  padding: 2rem;
+  background-color: $pink;
+  color: $blue;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.main {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+a {
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+  }
+}
+
+header {
+  margin-bottom: 4rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.link.program {
+  display: block;
+  opacity: 0.5;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rule {
+  margin: 4rem 0;
+  border-bottom: 1px solid $blue;
+  opacity: 0.5;
+}
+
+.movie {
+  display: flex;
+}
+.movie__date {
+  white-space: nowrap;
+  padding-right: 0.3rem;
+}

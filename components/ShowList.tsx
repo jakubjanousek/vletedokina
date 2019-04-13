@@ -1,9 +1,14 @@
 import Show from "./Show";
-import { ShowType } from "./Store";
+import { ShowType, cinemas } from "./Store";
 
 type Props = {
   shows: Array<ShowType>;
 };
+
+const emptyMessages = [
+  "V tento den se bohužel nic nepromítá",
+  "O ničem tady nevíme"
+];
 
 export default ({ shows }: Props) => (
   <>
@@ -13,11 +18,17 @@ export default ({ shows }: Props) => (
           title={show.title}
           date={show.date}
           time={show.time}
+          url={show.url}
+          cinema={cinemas[show.cinema]}
           key={show.date + show.time + show.title}
         />
       ))
     ) : (
-      <div>There are now shows for this day</div>
+      <div>
+        {emptyMessages[Math.floor(Math.random() * emptyMessages.length)]}
+      </div>
     )}
+    <br />
+    <br />
   </>
 );
