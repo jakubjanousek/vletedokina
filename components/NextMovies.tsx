@@ -1,6 +1,8 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
+
 import ShowList from "./ShowList";
 import getShowsForDay from "../helpers/getShowsForDay";
+
 import { shows } from "./Store";
 
 export default () => (

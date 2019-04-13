@@ -1,7 +1,18 @@
-import { ShowsType } from "./Store";
+import Show from "./Show";
+import { ShowType } from "./Store";
 
 type Props = {
-  shows: ShowsType;
+  shows: Array<ShowType>;
 };
 
-export default (props: Props) => <div>test</div>;
+export default ({ shows }: Props) => (
+  <>
+    {shows.length ? (
+      shows.map(show => (
+        <Show show={show} key={show.date + show.time + show.title} />
+      ))
+    ) : (
+      <div>There are now shows for this day</div>
+    )}
+  </>
+);
