@@ -4,6 +4,23 @@ export default () => (
   <Head>
     <title>V létě do kina | letní kina Praha</title>
 
+    {/* Global Site Tag (gtag.js) - Google Analytics */}
+    {/* TODO: is this the best way to load? */}
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=UA-121779324-1`}
+    />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-121779324-1');
+            `
+      }}
+    />
+
     <meta name="viewport" content="width=device-width" />
     <link
       rel="apple-touch-icon"
