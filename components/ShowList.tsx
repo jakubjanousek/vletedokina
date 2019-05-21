@@ -28,7 +28,5 @@ export default ({ shows }: Props) => (
         {emptyMessages[Math.floor(Math.random() * emptyMessages.length)]}
       </div>
     )}
-    <br />
-    <br />
   </>
 );
