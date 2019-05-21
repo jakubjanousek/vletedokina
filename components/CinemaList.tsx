@@ -1,9 +1,10 @@
 import { cinemas } from "./Store";
+import Cinema from "./Cinema";
 
 export default () => (
   <>
     {Object.keys(cinemas).map(id => (
-      <div key={id}>{cinemas[id].name}</div>
+      <Cinema cinema={cinemas[id]} id={id} key={id} />
     ))}
   </>
 );

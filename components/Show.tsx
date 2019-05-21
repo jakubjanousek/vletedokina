@@ -5,8 +5,13 @@ type Props = {
   title: string;
   date: string;
   time: string;
-  url: string;
-  cinema: CinemaType;
+  url?: string;
+  cinema?: CinemaType;
+};
+
+const defaultProps = {
+  url: null,
+  cinema: null
 };
 
 const renderTitle = (title: Props["title"], url: Props["url"]) =>
