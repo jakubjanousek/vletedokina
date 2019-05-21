@@ -1,10 +1,20 @@
+import dynamic from "next/dynamic";
+
 import HTMLHead from "../components/HTMLHead";
 import PageHeader from "../components/PageHeader";
-import NextMovies from "../components/NextMovies";
 import CinemaList from "../components/CinemaList";
 import Divider from "../components/Divider";
 
 import "../styles/style.scss";
+
+const NextMovies = dynamic(import("../components/NextMovies"), {
+  ssr: false,
+  loading: () => (
+    <>
+      <p>Hledáme pro vás nejbližší filmy...</p>
+    </>
+  )
+});
 
 const Home = () => {
   return (
