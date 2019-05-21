@@ -37,10 +37,10 @@ const renderCinema = (cinema: Props["cinema"]) => (
 );
 
 export default (props: Props) => (
-  <div>
+  <p>
     <strong>{dayjs(props.date).format("DD.MM")}</strong> -{" "}
-    {props.time && props.time + " -"}
+    {props.time && props.time + " - "}
     {renderTitle(props.title, props.url)}
     {props.cinema && renderCinema(props.cinema)}
-  </div>
+  </p>
 );
