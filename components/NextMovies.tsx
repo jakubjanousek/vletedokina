@@ -13,7 +13,7 @@ export default () => (
     <h2>Zítra:</h2>
     <ShowList shows={getShowsForDay(shows, dayjs().add(1, "day"))} />
 
-    <h2>15th May 2015</h2>
-    <ShowList shows={getShowsForDay(shows, dayjs("2019-05-15"))} />
+    <h2>Pozítří:</h2>
+    <ShowList shows={getShowsForDay(shows, dayjs().add(2, "day"))} />
   </div>
 );
