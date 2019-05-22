@@ -15,7 +15,7 @@ export default ({ cinema, id }: Props) => (
   <>
     <h2>{cinema.name}</h2>
     {cinema.url && (
-      <a className="link program" href={cinema.url}>
+      <a className="link program" href={cinema.url} target="_blank">
         {cinema.url}
       </a>
     )}
