@@ -1,11 +1,31 @@
-$pink: #fddfdc;
-$blue: #1a3a69;
+$lighttheme-pink: #fddfdc;
+$lighttheme-blue: #1a3a69;
+
+$blue: #05234f;
+$pink: #ffc3bc;
 
 body {
   padding: 2rem;
-  background-color: $pink;
-  color: $blue;
+  color: $pink;
+  background-color: $blue;
   font-family: "Roboto Slab", sans-serif;
+  animation: 3.2s ease-in-out 0s 1 nightfall;
+}
+
+@keyframes nightfall {
+  0% {
+    color: $blue;
+    background-color: $pink;
+    border-bottom-color: $blue;
+  }
+  30% {
+    color: $blue;
+  }
+  100% {
+    color: $pink;
+    background-color: $blue;
+    border-bottom-color: $pink;
+  }
 }
 
 .main {
@@ -37,15 +57,16 @@ strong {
 
 .link.program {
   display: block;
-  opacity: 0.5;
+  opacity: 0.6;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
 }
 
 .rule {
   margin: 4rem 0;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid $pink;
   opacity: 0.5;
+  animation: 3s ease-in-out 0s 1 nightfall;
 }
 
 .movie {
