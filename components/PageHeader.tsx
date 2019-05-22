@@ -1,7 +1,7 @@
 export default () => (
   <header>
     <h1>V létě do kina</h1>
-    <p>Beta verze. Taktéž prozatím jenom pražské letní kina.</p>
+    <p>Přehled letních kin a promítaní v Praze.</p>
     <p>
       V případě jakýchkoliv dotazů, nápadů nebo připomínek nám neváhejte napsat
       na
