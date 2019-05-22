@@ -4,14 +4,15 @@ import { CinemaType } from "./Store";
 type Props = {
   title: string;
   date: string;
-  time: string;
+  time?: string;
   url?: string;
   cinema?: CinemaType;
 };
 
 const defaultProps = {
   url: null,
-  cinema: null
+  cinema: null,
+  time: null
 };
 
 const renderTitle = (title: Props["title"], url: Props["url"]) =>
@@ -36,10 +37,15 @@ const renderCinema = (cinema: Props["cinema"]) => (
   </>
 );
 
+const renderDateTime = (date: Props["date"], time: Props["time"]) => (
+  <>
+    <strong>{dayjs(date).format("DD.MM")}</strong> - {time && time + " - "}
+  </>
+);
+
 export default (props: Props) => (
   <p>
-    <strong>{dayjs(props.date).format("DD.MM")}</strong> -{" "}
-    {props.time && props.time + " - "}
+    {renderDateTime(props.date, props.time)}
     {renderTitle(props.title, props.url)}
     {props.cinema && renderCinema(props.cinema)}
   </p>

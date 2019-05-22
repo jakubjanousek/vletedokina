@@ -20,7 +20,12 @@ export default ({ cinema, id }: Props) => (
       </a>
     )}
     {getShowsForCinema(id, shows, dayjs()).map(show => (
-      <Show title={show.title} date={show.date} time={show.time} />
+      <Show
+        title={show.title}
+        date={show.date}
+        time={show.time}
+        url={show.url}
+      />
     ))}
     <Divider />
   </>
