@@ -16,7 +16,6 @@ export default ({ shows }: Props) => (
       shows.map(show => (
         <Show
           title={show.title}
-          date={show.date}
           time={show.time}
           url={show.url}
           cinema={cinemas[show.cinema]}

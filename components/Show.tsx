@@ -15,6 +15,15 @@ const defaultProps = {
   time: null
 };
 
+const renderDate = (date: Props["date"]) => (
+  <>
+    <strong>{dayjs(date).format("DD.MM")}</strong>
+    &nbsp;-&nbsp;
+  </>
+);
+
+const renderTime = (time: Props["time"]) => time && time + " - ";
+
 const renderTitle = (title: Props["title"], url: Props["url"]) =>
   url ? (
     <a href={url} target="_blank">
@@ -37,15 +46,10 @@ const renderCinema = (cinema: Props["cinema"]) => (
   </>
 );
 
-const renderDateTime = (date: Props["date"], time: Props["time"]) => (
-  <>
-    <strong>{dayjs(date).format("DD.MM")}</strong> - {time && time + " - "}
-  </>
-);
-
 export default (props: Props) => (
   <p>
-    {renderDateTime(props.date, props.time)}
+    {props.date && renderDate(props.date)}
+    {props.time && renderTime(props.time)}
     {renderTitle(props.title, props.url)}
     {props.cinema && renderCinema(props.cinema)}
   </p>
