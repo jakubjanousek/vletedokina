@@ -10,6 +10,10 @@ body {
   background-color: $blue;
   font-family: "Roboto Slab", sans-serif;
   animation: 3.2s ease-in-out 0s 1 nightfall;
+
+  @media (max-width: 450px) {
+    padding: 1rem;
+  }
 }
 
 @keyframes nightfall {
@@ -31,6 +35,12 @@ body {
 .main {
   max-width: 750px;
   margin: 0 auto;
+}
+
+h1 {
+  @media (max-width: 450px) {
+    margin-top: 0;
+  }
 }
 
 h2 {
